@@ -1,8 +1,8 @@
-# Flash Attention — Intuition (read this first in Week 7)
+# Flash Attention — Intuition
 
 > Written Day 0 (2026-05-31) while the idea was fresh. Future-me: you understood this
-> once with zero CUDA under your belt. The concept is easy. The CUDA is the grind.
-> This file is here so you don't have to re-learn the *why* — just the *how*.
+> once with zero CUDA under my belt. The concept is easy. The CUDA is the grind.
+> This file is here so I don't have to re-learn the *why* — just the *how*.
 
 ---
 
@@ -89,17 +89,12 @@ whole win. Memory also drops from O(N²) to O(N).
 
 ## Why this is the capstone, not the start
 
-Flash Attention is not a new thing to learn — it's the three things you're already
+Flash Attention is not a new thing to learn — it's the three things I'm already
 learning, stacked:
 
 - **Tiling** → Week 1 (matmul)
 - **Online softmax** → Week 2 (softmax), upgraded to the running-tally version
 - **Fusion** → Weeks 5–6 (fused LayerNorm + GeLU)
-
-By Week 7 each move is muscle memory. Week 7 is just combining reflexes you already own.
-The forward pass (Week 7) = tiling + online softmax + fusion. The backward pass (Week 8,
-"THE HARDEST WEEK") = recompute the tiles during the gradient pass instead of storing
-them.
 
 ---
 
