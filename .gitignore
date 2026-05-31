@@ -216,3 +216,33 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Training artifacts (too large for git)
+gpt2_tiny/checkpoints/
+gpt2_tiny/data/*.bin
+gpt2_tiny/data/*.txt
+gpt2_tiny/data/tinystories/
+*.pt
+*.pth
+*.bin
+*.ckpt
+
+# CUDA build artifacts
+*.o
+*.obj
+build/
+dist/
+*.fatbin
+*.cubin
+*.ptx
+
+# Profiling output
+*.nsight-cuprof-report
+*.qdrep
+*.qdrep-pgm
+*.sqlite
+
+# Editors
+.vscode/
+.idea/
+*.swp
