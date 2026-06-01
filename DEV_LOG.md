@@ -16,7 +16,7 @@ Future-me reads this on bad days. BIShIP application readers might too.
 
 **Goal**: GPU MODE lectures 1-3 done. Three working kernels: vector_add, transpose, naive_matmul. Each with a test and benchmark.
 
-**2026-06-01 (Day 1)**:
+**2026-06-01 (Day 1)**:Shipped vector_add kernel (out[i]=a[i]+b[i]) + standalone test/benchmark. Correct vs torch.add at 1K/1M/10M. T4 hits 264 GB/s sustained @ 50M = 82% of ~320 peak. Lesson: memory-bound op, naive ≈ optimal — no trick beats the bandwidth wall. Small n (75%) hides true throughput because launch overhead dominates. Tomorrow: transpose.
 **2026-06-02 (Day 2)**:
 **2026-06-03 (Day 3)**:
 **2026-06-04 (Day 4)**:
